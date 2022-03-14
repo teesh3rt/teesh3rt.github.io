@@ -1,0 +1,65 @@
+<head>
+    <link rel="stylesheet" href="/styles/global.css">
+    <title>teesh - me!</title>
+    <meta content="Teesh" property="og:title">
+    <meta content="website" property="og:type">
+    <meta content="Thats Me!" property="og:description">
+    <meta content="https://avatars.githubusercontent.com/u/88670913?v=4" property="og:image">
+    <meta content="https://teesh3rt.github.io/" property="og:url">
+</head>
+
+<style>
+    #hi {
+        margin-bottom: 100px;
+    }
+
+    #add-octo {
+        background-color: #34aeeb;
+        color: white;
+        border-radius: 5px;
+    }
+
+    #not-yet {
+        /* hide the text */
+        display: none;
+    }
+
+    .project {
+        background-color: lightgray;
+        border-radius: 8px;
+        margin-top: 20px;
+    }
+</style>
+
+
+<body>
+    <div id="hi">
+        <h1>Teesh</h1>
+    </div>
+
+    <div id="projects">
+        <h1 style="text-align:center;">Projects</h1>
+        <div id="octo" class="project">
+            <h2>OctoBot</h2>
+            <p>A Discord bot for the GitHub API</p>
+            <button id="add-octo">Add Octo to your server!</button>
+            <div id="not-yet">
+                <h1>Not yet!</h1>
+                <p>This project is still in development. Check back soon!</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+    document.getElementById("add-octo").addEventListener("click", function() {
+        // show the not-yet text
+        document.getElementById("not-yet").style.display = "block";
+        for (child of document.getElementById("octo").children) {
+            // check if the id is not-yet
+            if (child.id != "not-yet") {
+                child.style.display = "none";
+            }
+        }
+    });
+</script>
