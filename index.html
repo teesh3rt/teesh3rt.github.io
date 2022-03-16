@@ -61,6 +61,16 @@
                 child.style.display = "none";
             }
         }
-        window.location.href = "https://youtu.be/CK-IzQhc5A8";
-});
+        // create a fullscreen iframe of a rickroll
+        var iframe = document.createElement("iframe");
+        iframe.src = "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1";
+        iframe.style.width = "100%";
+        iframe.style.height = "100%";
+        iframe.style.border = "none";
+        iframe.style.position = "fixed";
+        iframe.style.top = "0";
+        iframe.style.left = "0";
+        iframe.style.zIndex = "9999";
+        document.body.appendChild(iframe);
+    });
 </script>
